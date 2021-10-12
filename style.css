@@ -1,0 +1,111 @@
+.blue {
+  color: #1c87c9;
+}
+.red {
+  color: red;
+}
+
+h1 {
+  text-shadow: 5px 3px 2px #717966;
+  font: 1em Roboto, Helvetica, sans-serif;
+  font-size: 300%;
+  color: red;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(196, 196, 240);
+}
+header {
+  height: 300px;
+  width: max-width;
+  background-image: url(header.jpg);
+}
+header p {
+  text-align: right;
+}
+nav {
+  height: 50px;
+  width: max-width;
+  font-size: 150%;
+  font-style: italic;
+  color: yellow;
+  background-color: rgb(125, 154, 235);
+}
+aside {
+  height: 270px;
+  width: max-width;
+  font-size: max-height;
+  font-style: italic;
+  color: rgb(112, 112, 107);
+  background-color: rgb(205, 212, 233);
+}
+
+article {
+  height: 350px;
+  width: max-width;
+  font-size: max-height;
+  font-style: italic;
+  color: rgb(112, 112, 107);
+  background-color: rgb(205, 212, 233);
+}
+
+.outsurname {
+  position: absolute;
+  left: 10px;
+  top: auto;
+  width: 100px;
+  height: 20px;
+}
+.outname {
+  position: absolute;
+  left: 150px;
+  top: auto;
+}
+.outage {
+  position: absolute;
+  left: 250px;
+  top: auto;
+}
+.outaddress {
+  position: absolute;
+  left: 350px;
+  top: auto;
+}
+footer {
+  height: 100px;
+  width: max-width;
+  font-size: 25px;
+  font-style: normal;
+
+  color: rgb(179, 152, 199);
+  background-color: rgb(9, 16, 36);
+}
+.conteiner {
+  overflow: auto;
+  border: 2px solid #666666;
+}
+.conteiner div {
+  width: 49%;
+  padding: 5px;
+}
+.ru_green {
+  float: right;
+  width: 50%;
+  background-image: url(bk.jpg);
+}
+.en_red {
+  float: left;
+  width: 50%;
+  background-image: url(uk.jpg);
+}
+.asi {
+  overflow: auto;
+}
+.asi div {
+  float: right;
+  width: 25%;
+  background: rgb(202, 178, 178);
+  padding: 10px;
+  font-size: 20px;
+}

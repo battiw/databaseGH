@@ -1,0 +1,137 @@
+let arrayDataBase = [
+  { surNAME: "George", name: "Washington", age: "140", address: "strit" },
+  { surNAME: "Thomas", name: "Jefferson", age: "150", address: "strit" },
+  { surNAME: "Barack", name: "Obama", age: "140", address: "strit" },
+  { surNAME: "Dl", name: "Dimitrius", age: "35", address: "San Jose" },
+];
+
+function clickMe1() {
+  let sN = document.getElementById("surName");
+  let n = document.getElementById("name");
+  let aG = document.getElementById("age");
+  let aD = document.getElementById("address");
+
+  let check;
+  for (k of arrayDataBase) {
+    if (
+      n.value === k.name ||
+      sN.value === k.surNAME ||
+      aG.value === k.age ||
+      aD.value === k.address
+    ) {
+      alert("data is available in the database");
+      check = 1;
+      break;
+    }
+  }
+
+  if (check !== 1) {
+    let a = new Input(sN.value, n.value, aG.value, aD.value);
+    arrayDataBase.push(a);
+  }
+
+  function Input(surNAME, name, age, address) {
+    // constructor creatur object
+    this.surNAME = surNAME;
+    this.name = name;
+    this.age = age;
+    this.address = address;
+  }
+
+  console.dir(arrayDataBase);
+}
+
+function clickMe2() {
+  for (k of arrayDataBase) {
+    let inpsN = document.querySelector(".surname");
+    let inpN = document.querySelector(".name");
+    let inpaG = document.querySelector(".age");
+    let inpaD = document.querySelector(".address");
+
+    let divsN = document.createElement("div");
+    let divN = document.createElement("div");
+    let divaG = document.createElement("div");
+    let divaD = document.createElement("div");
+
+    divsN.className = "surName";
+    divN.className = "name";
+    divaG.className = "age";
+    divaD.className = "address";
+
+    divsN.innerHTML = k.surNAME;
+    divN.innerHTML = k.name;
+    divaG.innerHTML = k.age;
+    divaD.innerHTML = k.address;
+
+    inpsN.appendChild(divsN);
+    inpN.appendChild(divN);
+    inpaG.appendChild(divaG);
+    inpaD.appendChild(divaD);
+  }
+}
+
+function clickMe3() {
+  let dataSearch = document.getElementById("search");
+
+  for (k of arrayDataBase) {
+    if (
+      k.surNAME === dataSearch.value ||
+      k.name === dataSearch.value ||
+      k.age === dataSearch.value ||
+      k.address === dataSearch.value
+    ) {
+      let outSurName = document.querySelector(".outsurname");
+      let outName = document.querySelector(".outname");
+      let outAge = document.querySelector(".outage");
+      let outAddress = document.querySelector(".outaddress");
+
+      let divsN = document.createElement("div");
+      let divN = document.createElement("div");
+      let divaG = document.createElement("div");
+      let divaD = document.createElement("div");
+
+      divsN.className = "outSurName";
+      divN.className = "outName";
+      divaG.className = "outAge";
+      divaD.className = "outAddress";
+
+      divsN.innerHTML = k.surNAME;
+      divN.innerHTML = k.name;
+      divaG.innerHTML = k.age;
+      divaD.innerHTML = k.address;
+
+      outSurName.appendChild(divsN);
+      outName.appendChild(divN);
+      outAge.appendChild(divaG);
+      outAddress.appendChild(divaD);
+    }
+  }
+}
+
+function clickMe4() {
+  while (true) {
+    let coutSurName = document.querySelector(".surname");
+    let coutName = document.querySelector(".name");
+    let coutAge = document.querySelector(".age");
+    let coutAddress = document.querySelector(".address");
+
+    coutSurName.removeChild(coutSurName.firstChild);
+    coutName.removeChild(coutName.firstChild);
+    coutAge.removeChild(coutAge.firstChild);
+    coutAddress.removeChild(coutAddress.firstChild);
+  }
+}
+
+function clickMe5() {
+  while (true) {
+    let clearSurName = document.querySelector(".outsurname");
+    let clearName = document.querySelector(".outname");
+    let clearAge = document.querySelector(".outage");
+    let clearAddress = document.querySelector(".outaddress");
+
+    clearSurName.removeChild(clearSurName.firstChild);
+    clearName.removeChild(clearName.firstChild);
+    clearAge.removeChild(clearAge.firstChild);
+    clearAddress.removeChild(clearAddress.firstChild);
+  }
+}
